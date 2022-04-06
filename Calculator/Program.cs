@@ -7,7 +7,7 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            ConsoleUI userinterface = new ConsoleUI(new Controller());
+            PrettyConsoleUI userinterface = new PrettyConsoleUI(new Controller());
             userinterface.Run();
 
 
