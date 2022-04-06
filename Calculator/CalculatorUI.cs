@@ -11,5 +11,6 @@ namespace Calculator
         public void ShowError();
         public void ShowResult(double result);
         public int SelectOperationIndex();
+        public void Run();
     }
 }

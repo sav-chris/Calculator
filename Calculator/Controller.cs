@@ -20,7 +20,7 @@ namespace Calculator
         private Operation SelectOperation(CalculatorUI userInterface)
         {
             int index = userInterface.SelectOperationIndex();
-            return (0 < index && index <= Operations.Count) ? Operations.ElementAt(index-1) : null;
+            return (0 < index && index <= Operations.Count) ? Operations.ElementAt(index - 1) : null;
         }
 
         public void AddOperation(Operation operation)

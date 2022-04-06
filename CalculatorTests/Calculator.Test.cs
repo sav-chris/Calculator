@@ -12,9 +12,9 @@ namespace CalculatorTests
         }
 
         [Test]
-        public void TestFivePlusFive()
+        public void TestThreePlusFour()
         {
-            CalculatorUIMock userinterface = new CalculatorUIMock(new Controller(), new List<double>() { 3, 4 });
+            CalculatorUIMock userinterface = new CalculatorUIMock(new Controller(), new List<double?>() { 3, 4 }, 7);
             userinterface.Run();
             Assert.Pass();
         }

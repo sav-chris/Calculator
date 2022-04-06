@@ -7,7 +7,8 @@ namespace CalculatorTests
 {
     class CalculatorUIMock : Calculator.CalculatorUI
     {
-        private List<double> arguments = new List<double>();
+        private List<double?> arguments = new List<double?>();
+        private double expetedResult;
 
         private Calculator.Controller Controller { get; }
 
@@ -20,11 +21,11 @@ namespace CalculatorTests
         {
             if (arguments.Count > 0)
             {
-                double first = arguments[0];
+                double? first = arguments[0];
                 arguments.Remove(0);
                 return first;
             }
-            return 5;
+            return null;
         }
 
         public int SelectOperationIndex()
@@ -39,7 +40,11 @@ namespace CalculatorTests
 
         public void ShowResult(double result)
         {
-            
+            if (expetedResult != result)
+            {
+                string msg = string.Format("Expected {0}, but calculated {1}", expetedResult, result);
+                throw new ArithmeticException(msg);
+            }
         }
 
         public void Run()
@@ -47,10 +52,11 @@ namespace CalculatorTests
             this.Controller.Run(this);
         }
 
-        public CalculatorUIMock(Controller controller, List<double> arguments)
+        public CalculatorUIMock(Controller controller, List<double?> arguments, double expetedResult)
         {
             this.Controller = controller;
             this.arguments = arguments;
+            this.expetedResult = expetedResult;
         }
     }
 }
