@@ -3,22 +3,45 @@
   <Class Name="Calculator.ConsoleUI">
     <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAAAAAAgAAQAAQQAAAAAAAIAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAAABAAAAQAAAAAAAAQAAQQAAAAAAAIAAAAAAAAAAAI=</HashCode>
       <FileName>ConsoleUI.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Calculator.Controller">
-    <Position X="2.75" Y="0.75" Width="1.5" />
+    <Position X="2.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAABQACIAAAAAAAAAQAAQQAAAAAAAIEAAAAAAAAAAI=</HashCode>
+      <HashCode>EAAAAQACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
       <FileName>Controller.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Calculator.Operation">
     <Position X="4.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Operation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calculator.BinaryOperation" Collapsed="true">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BinaryOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Calculator.PrettyConsoleUI" Collapsed="true">
+    <Position X="2.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAQAAAAAAAAQAAQQAAAAAAAIAAAAAAAAAAAI=</HashCode>
+      <FileName>PrettyConsoleUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Calculator.UnaryOperation" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UnaryOperation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
