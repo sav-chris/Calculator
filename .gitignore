@@ -3,3 +3,8 @@
 /Calculator/obj/Calculator.csproj.nuget.dgspec.json
 /Calculator/obj/Calculator.csproj.nuget.g.props
 /Calculator/obj/Calculator.csproj.nuget.g.targets
+/CalculatorTests/obj/project.nuget.cache
+/CalculatorTests/obj/CalculatorTests.csproj.nuget.dgspec.json
+/CalculatorTests/obj/CalculatorTests.csproj.nuget.g.props
+/CalculatorTests/obj/CalculatorTests.csproj.nuget.g.targets
+/CalculatorTests/obj/project.assets.json
