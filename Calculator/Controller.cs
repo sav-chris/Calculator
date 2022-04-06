@@ -56,6 +56,19 @@ namespace Calculator
 
                 if (operation is UnaryOperation)
                 {
+                    UnaryOperation UnaOp = (operation as UnaryOperation);
+                    if (!(operation is null))
+                    {
+                        double? x = userInterface.RequestArgument();
+                        if (x is null)
+                        {
+                            userInterface.ShowError();
+                        }
+                        else
+                        {
+                            userInterface.ShowResult(UnaOp.UnaryFunction(x.Value));
+                        }
+                    }
 
                 }
             }
@@ -72,6 +85,8 @@ namespace Calculator
             this.AddOperation(new BinaryOperation("Multiply", (x, y) => x * y));
             this.AddOperation(new BinaryOperation("Divide", (x, y) => x / y));
             this.AddOperation(new BinaryOperation("Exponent", (x, y) => Math.Pow(x, y)));
+            this.AddOperation(new UnaryOperation("Increment", (x) => x + 1));
+            this.AddOperation(new UnaryOperation("Decrement", (x) => x - 1));
         }
     }
 }

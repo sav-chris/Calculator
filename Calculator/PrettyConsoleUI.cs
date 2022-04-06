@@ -13,7 +13,7 @@ namespace Calculator
         private void SetColours()
         {
             Console.BackgroundColor = ConsoleColor.Blue;
-            Console.ForegroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         public void DisplayOperations()
@@ -22,7 +22,7 @@ namespace Calculator
 
             Console.WriteLine("Choose an operation: ");
             int itemNo = 1;
-            foreach (BinaryOperation operation in this.Controller.Operations)
+            foreach (Operation operation in this.Controller.Operations)
             {
                 string itemText = (itemNo++).ToString();
                 Console.WriteLine(itemText + ". " + operation.Name);
