@@ -35,18 +35,28 @@ namespace Calculator
             {
                 userInterface.DisplayOperations();
                 operation = SelectOperation(userInterface);
-                if (!(operation is null))
+
+                if (operation is BinaryOperation)
                 {
-                    double? x = userInterface.RequestArgument();
-                    double? y = userInterface.RequestArgument();
-                    if (x is null || y is null)
+                    BinaryOperation binOp = (operation as BinaryOperation);
+                    if (!(operation is null))
                     {
-                        userInterface.ShowError();
+                        double? x = userInterface.RequestArgument();
+                        double? y = userInterface.RequestArgument();
+                        if (x is null || y is null)
+                        {
+                            userInterface.ShowError();
+                        }
+                        else
+                        {
+                            userInterface.ShowResult(binOp.BinaryFunction(x.Value, y.Value));
+                        }
                     }
-                    else
-                    {
-                        userInterface.ShowResult(operation.BinaryFunction(x.Value, y.Value));
-                    }
+                }
+
+                if (operation is UnaryOperation)
+                {
+
                 }
             }
             while (!(operation is null));
@@ -57,11 +67,11 @@ namespace Calculator
         public Controller()
         {
             Operations = new List<Operation>();
-            this.AddOperation(new Operation("Add", (x, y) => x + y));
-            this.AddOperation(new Operation("Subtract", (x, y) => x - y));
-            this.AddOperation(new Operation("Multiply", (x, y) => x * y));
-            this.AddOperation(new Operation("Divide", (x, y) => x / y));
-            this.AddOperation(new Operation("Exponent", (x, y) => Math.Pow(x, y)));
+            this.AddOperation(new BinaryOperation("Add", (x, y) => x + y));
+            this.AddOperation(new BinaryOperation("Subtract", (x, y) => x - y));
+            this.AddOperation(new BinaryOperation("Multiply", (x, y) => x * y));
+            this.AddOperation(new BinaryOperation("Divide", (x, y) => x / y));
+            this.AddOperation(new BinaryOperation("Exponent", (x, y) => Math.Pow(x, y)));
         }
     }
 }

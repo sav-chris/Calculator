@@ -12,7 +12,7 @@ namespace Calculator
         {
             Console.WriteLine("Choose an operation: ");
             int itemNo = 1;
-            foreach (Operation operation in this.Controller.Operations)
+            foreach (BinaryOperation operation in this.Controller.Operations)
             {
                 string itemText = (itemNo++).ToString();
                 Console.WriteLine(itemText + ". " + operation.Name);

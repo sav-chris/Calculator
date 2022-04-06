@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Calculator
 {
@@ -8,14 +10,7 @@ namespace Calculator
     {
         public string Name { get; set; }
 
-        public Func<double, double, double> BinaryFunction { get; set; }
 
-        public Operation(string name, Func<double, double, double> binaryFunction)
-        {
-            this.Name = name;
-            this.BinaryFunction = binaryFunction;
-        }
 
     }
-
 }
