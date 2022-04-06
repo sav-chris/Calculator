@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Calculator
 {
-    class Controller
+    public class Controller
     {
         public List<Operation> Operations { get; }
 

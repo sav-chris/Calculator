@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Calculator
 {
-    interface CalculatorUI
+    public interface CalculatorUI
     {
         public void DisplayOperations();
         public double? RequestArgument();
